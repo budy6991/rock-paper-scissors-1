@@ -3,10 +3,10 @@ let number = () => Math.floor(Math.random() *3);
 const rps=["rock","paper","scissors"];
 
 
-let computer; 
-let player;
+
 let playerScore = 0;
 let computerScore = 0;
+let i;
 function result(computer, player){
   
   if (computer === "rock" && player === "rock"){console.log("its a tie")}
@@ -15,18 +15,17 @@ function result(computer, player){
 
   else if(computer === "scissors" && player === "rock"){console.log("you get a point"), playerScore++}
   else if(computer === "rock" && player === "paper"){console.log("you get a point"), playerScore++}
-  else if(computer === "paper" && player === "scissor"){console.log("you get a point"), playerScore++}
+  else if(computer === "paper" && player === "scissors"){console.log("you get a point"), playerScore++}
 
-  else if(computer === "rock" && player === "scissor"){console.log("computer gets a point"), computerScore++}
+  else if(computer === "rock" && player === "scissors"){console.log("computer gets a point"), computerScore++}
   else if(computer === "paper" && player === "rock"){console.log("computer gets a point"), computerScore++}
-  else if(computer === "scissor" && player === "paper"){console.log("computer gets a point"), computerScore++}
-  //else{console.log("please enter a acceptable answer")}
+  else if(computer === "scissors" && player === "paper"){console.log("computer gets a point"), computerScore++}
+  else{console.log("please enter a acceptable answer"),i++}
 
 }
 
-for(let i =0; i<=5; i++){
+for( i =0; i<=5; i++){
   
-
   const x=number();
   //console.log(rps[x],x);
 
@@ -40,19 +39,12 @@ for(let i =0; i<=5; i++){
 
   result(computer,player);
 
-  console.log("computer score: ", computerScore, "player score: ",playerScore)
+  console.log("computer score: ", computerScore, "player score: ",playerScore, "you have ",i,"rounds left")
 }
 
-
-
-
-
-
-
-
-
-
-
 console.log("FINAL SCORE","computer score: ", computerScore, "player score: ",playerScore)
+if(computerScore>playerScore){console.log("computer wins!")}
+else if(computerScore<playerScore){console.log("you win!")}
+else{"it's a tie"}
 
 
