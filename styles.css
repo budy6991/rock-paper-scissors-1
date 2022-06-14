@@ -1,3 +1,8 @@
-p{
-    color: blue;
+.buttons{
+    width: 100px;
+    height: 20px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
 }
