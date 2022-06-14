@@ -20,11 +20,11 @@ function result(computer, player){
   else if(computer === "rock" && player === "scissors"){console.log("computer gets a point"), computerScore++}
   else if(computer === "paper" && player === "rock"){console.log("computer gets a point"), computerScore++}
   else if(computer === "scissors" && player === "paper"){console.log("computer gets a point"), computerScore++}
-  else{console.log("please enter a acceptable answer"),i++}
+  else{console.log("please enter a acceptable answer"),i--}
 
 }
 
-for( i =0; i<=5; i++){
+for( i =1; i<6; i++){
   
   const x=number();
   //console.log(rps[x],x);
@@ -39,7 +39,7 @@ for( i =0; i<=5; i++){
 
   result(computer,player);
 
-  console.log("computer score: ", computerScore, "player score: ",playerScore, "you have ",i,"rounds left")
+  console.log("computer score: ", computerScore, "player score: ",playerScore, "you have played ",i,"rounds")
 }
 
 console.log("FINAL SCORE","computer score: ", computerScore, "player score: ",playerScore)
