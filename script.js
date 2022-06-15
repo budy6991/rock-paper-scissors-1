@@ -54,6 +54,7 @@ function result(computer, player){
   else if(computer === "scissors" && player === "rock"){console.log("(and as it always has) Rock crushes Scissors"), playerScore++}
   else if(computer === "rock" && player === "paper"){console.log("Paper covers Rock"), playerScore++}
   else if(computer === "paper" && player === "scissors"){console.log("Scissors cuts Paper"), playerScore++}
+
   else if(computer === "lizard" && player === "scissors"){console.log("Scissors decapitates Lizard"), playerScore++}
   else if(computer === "lizard" && player === "rock"){console.log("Rock crushes Lizard"), playerScore++}
   else if(computer === "spock" && player === "lizard"){console.log("Lizard poisons Spock"), playerScore++}
@@ -67,6 +68,14 @@ function result(computer, player){
   else if(computer === "rock" && player === "scissors"){console.log("computer gets a point"), computerScore++}
   else if(computer === "paper" && player === "rock"){console.log("computer gets a point"), computerScore++}
   else if(computer === "scissors" && player === "paper"){console.log("computer gets a point"), computerScore++}
+
+  else if(computer === "scissors" && player === "lizard"){console.log("Scissors decapitates Lizard"), computerScore++}
+  else if(computer === "rock" && player === "lizard"){console.log("Rock crushes Lizard"), computerScore++}
+  else if(computer === "lizard" && player === "spock"){console.log("Lizard poisons Spock"), computerScore++}
+  else if(computer === "spock" && player === "scissors"){console.log("Spock smashes Scissors"), computerScore++}
+  else if(computer === "lizard" && player === "paper"){console.log("Lizard eats Paper"), computerScore++}
+  else if(computer === "paper" && player === "spock"){console.log("Paper disproves Spock"), computerScore++}
+  else if(computer === "spock" && player === "rock"){console.log("Spock vaporizes Rock"), computerScore++}
   else{console.log("please enter a acceptable answer"),i--}
 
 }
