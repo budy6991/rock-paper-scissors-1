@@ -32,16 +32,40 @@ container.appendChild(btnLizard);
 container.appendChild(btnSpock);
 
 
-let number = () => Math.floor(Math.random() *3);
-
-const rps=["rock","paper","scissors","lizard","spock"];
-
-
-
+let player;
 let playerScore = 0;
 let computerScore = 0;
 let i;
-player = "rock";
+
+let number = () => Math.floor(Math.random() *4);
+const rps=["rock","paper","scissors","lizard","spock"];
+
+function computerPlay(){
+  const x=number();
+  //console.log(rps[x],x);
+  return  computer = rps[x]
+  //console.log("computer plays: ",computer);
+  
+
+}  
+
+
+btnRock.addEventListener('click', () =>{
+  
+  
+  player = "rock"
+  console.log("computer plays: ",computerPlay());
+  console.log("player plays: ",player);
+  
+  result(computer,player);  
+});
+
+
+
+
+
+
+
 function result(computer, player){
   
   if (computer === "rock" && player === "rock"){console.log("its a tie")}
@@ -65,9 +89,9 @@ function result(computer, player){
 
 
 
-  else if(computer === "rock" && player === "scissors"){console.log("computer gets a point"), computerScore++}
-  else if(computer === "paper" && player === "rock"){console.log("computer gets a point"), computerScore++}
-  else if(computer === "scissors" && player === "paper"){console.log("computer gets a point"), computerScore++}
+  else if(computer === "rock" && player === "scissors"){console.log("(and as it always has) Rock crushes Scissors"), computerScore++}
+  else if(computer === "paper" && player === "rock"){console.log("Paper covers Rock"), computerScore++}
+  else if(computer === "scissors" && player === "paper"){console.log("Scissors cuts Paper"), computerScore++}
 
   else if(computer === "scissors" && player === "lizard"){console.log("Scissors decapitates Lizard"), computerScore++}
   else if(computer === "rock" && player === "lizard"){console.log("Rock crushes Lizard"), computerScore++}
@@ -80,27 +104,22 @@ function result(computer, player){
 
 }
 
-//for( i =1; i<6; i++){
-  
-  const x=number();
-  //console.log(rps[x],x);
 
-  let computer = rps[x]
-  console.log("computer plays: ",computer);
+  
 
   
   //let player = prompt("please type rock paper or scissors");
   
-  console.log("player plays: ",player);
+  
 
-  result(computer,player);
+  //result(computer,player);
 
-  console.log("computer score: ", computerScore, "player score: ",playerScore, "you have played ",i,"rounds")
-//}
+  //console.log("computer score: ", computerScore, "player score: ",playerScore, "you have played ",i,"rounds")
 
-console.log("FINAL SCORE","computer score: ", computerScore, "player score: ",playerScore)
-if(computerScore>playerScore){console.log("computer wins!")}
-else if(computerScore<playerScore){console.log("you win!")}
-else{"it's a tie"}
+
+//console.log("FINAL SCORE","computer score: ", computerScore, "player score: ",playerScore)
+//if(computerScore>playerScore){console.log("computer wins!")}
+//else if(computerScore<playerScore){console.log("you win!")}
+//else{"it's a tie"}
 
 
