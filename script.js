@@ -20,7 +20,7 @@ function result(computer, player){
   else if(computer === "rock" && player === "scissors"){console.log("computer gets a point"), computerScore++}
   else if(computer === "paper" && player === "rock"){console.log("computer gets a point"), computerScore++}
   else if(computer === "scissors" && player === "paper"){console.log("computer gets a point"), computerScore++}
-  else{console.log("please enter a acceptable answer"),i--}
+  else{console.log("please enter an acceptable answer"),i--}
 
 }
 
